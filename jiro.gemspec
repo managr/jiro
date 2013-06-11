@@ -24,9 +24,15 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "jiro.gemspec",
     "lib/jiro.rb",
+    "lib/jiro/redis_connection.rb",
+    "lib/jiro/view_resolver.rb",
+    "spec/jiro/redis_connection_spec.rb",
+    "spec/jiro/view_resolver_spec.rb",
     "spec/jiro_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/support/file_system_resolver.rb"
   ]
   s.homepage = "http://github.com/managr/jiro"
   s.licenses = ["MIT"]
@@ -38,17 +44,20 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<redis>, ["~> 3.0.4"])
       s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, ["~> 1.3.5"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
     else
+      s.add_dependency(%q<redis>, ["~> 3.0.4"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, ["~> 1.3.5"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
     end
   else
+    s.add_dependency(%q<redis>, ["~> 3.0.4"])
     s.add_dependency(%q<rspec>, ["~> 2.8.0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, ["~> 1.3.5"])
