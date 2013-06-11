@@ -1,6 +1,6 @@
 = jiro
 
-Description goes here.
+Super simple solution for Ruby On Rails content management.
 
 == Contributing to jiro
  

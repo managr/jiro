@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "jiro"
   gem.homepage = "http://github.com/managr/jiro"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Simple CMS for Rails hackers"
+  gem.description = "CMS that intercept Rails ActionView Templates and allow changing them directly from Redis storage"
   gem.email = "marcin.naglik@gmail.com"
   gem.authors = ["Marcin Naglik"]
   # dependencies defined in Gemfile
