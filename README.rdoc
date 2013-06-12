@@ -2,6 +2,8 @@
 
 Super simple solution for Ruby On Rails content management.
 
+{<img src="https://travis-ci.org/managr/jiro.png" alt="Build Status" />}[https://travis-ci.org/managr/jiro]
+
 == Contributing to jiro
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
