@@ -2,7 +2,7 @@
 
 Super simple solution for Ruby On Rails content management.
 
-{<img src="https://travis-ci.org/managr/jiro.png" alt="Build Status" />}[https://travis-ci.org/managr/jiro]
+{<img src="https://travis-ci.org/managr/jiro.png" alt="Build Status" />}[https://travis-ci.org/managr/jiro] {<img src="https://gemnasium.com/managr/jiro.png" alt="Dependency Status" />}[https://gemnasium.com/managr/jiro]
 
 == Contributing to jiro
  
