@@ -2,26 +2,28 @@ require 'jiro/redis_connection'
 require 'jiro/view_resolver'
 
 module Jiro
-  module AppId
-    def app_id
-      defined?(@app_id) ? @app_id : Jiro.app_id
-    end
-
-    def app_id=(id)
-      @app_id = id
-    end
-  
-    def redis_opts
-      defined?(@redis_opts)? @redis_opts : Jiro.redis_opts
-    end
-
-    def redis_opts=(opts)
-      @redis_opts = opts
-    end
+  class << self
+    attr_accessor :configuration
   end
 
-  extend AppId
+  def self.configure
+    self.configuration ||= Configuration.new
+    yield(configuration)
+  end
 
-  self.app_id = "jiro_cms_pages"
-  self.redis_opts = {}
+  class Configuration
+    attr_accessor :app_id
+    attr_accessor :redis_opts
+    attr_accessor :limit_to_handlers
+
+    def initialize
+      @app_id = 'jiro_cms_pages'
+      @redis_opts = {}
+      @limit_to_handlers = nil
+    end
+  end
+end
+
+Jiro.configure do |c|
+  # empty configuration called to initialize
 end
